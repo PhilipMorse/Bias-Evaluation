@@ -2,7 +2,7 @@
 
 (function() {
 
-  // just place a div at top right
+	// just place a div at top right
 	var div = document.createElement('div');
 	div.style.position = 'fixed';
 	div.style.top = 0;
