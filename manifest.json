@@ -1,18 +1,26 @@
 {
   "name": "Bias Evaluation",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "manifest_version": 2,
   "description": "Displays the political bias of a webpage",
   "web_accessible_resources": [
     "arrow2.png",
-    "dot.png"
+    "dot.png",
+    "css.css"
   ],
   "content_scripts": [
     {
+      "run_at": "document_end",
+      "js": ["inject.js"],
       "matches": [ "<all_urls>" ],
       "css": [ "css.css" ]
     }
   ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "background": {
     "scripts": [ "background.js" ]
   },
